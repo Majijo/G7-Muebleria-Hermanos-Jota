@@ -1,0 +1,227 @@
+/* =========================================================
+   - Persona A: RESET+VARIABLES, BASE, HERO, FOOTER
+   - Persona B: HEADER+NAV, DESTACADOS (cards), CONTACTO (formulario) */
+  
+   /* Importación de fuentes, util porque no todas estan en todos los s*/
+   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+
+/* ===================== Persona A ===================== */
+/* ========== RESET + VARIABLES ========== */
+* { box-sizing: border-box; margin: 0; padding: 0;  } /* reset mínimo, evita calculos de padding y margin se parte de 0*/
+
+:root {
+  /* Colores de marca*/
+  --color-primario: #A0522D;
+  --color-secundario: #87A96B;
+  --color-fondo: #F5E6D3;
+  --detalle-premium: #D4A437;
+  --acentos-suaves: #C47A6D;
+  --color-texto:    #1d1d1d;
+  --color-texto-inv:#ffffff;
+  --color-borde:    #e7e7e7;
+
+
+  /* Tipografías */
+  --font-sans: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  
+   /* Guías tipográficas del manual */
+   --tracking-titulo: 0.1em;   /* Títulos principales (mayúsculas) */
+   --tracking-leyenda: 0.02em; /* Leyendas */
+   --tracking-cta: 0.08em;     /* Botones/CTAs (mayúsculas) */
+ 
+   /* Variables de espacio, todo el proyecto misma escala */
+   --maxw: 1100px;
+   --s1: .25rem; --s2: .5rem; --s3: .75rem;
+   --s4: 1rem;  --s5: 1.5rem; --s6: 2rem; --s8: 3rem;
+ 
+   /* Radio, redondeo de bordes */
+   --radius: 12px;
+}
+
+
+/* ========== BASE (utilidades globales) ========== */
+html { scroll-behavior: smooth; }
+
+/* Por defecto en todo el proyecto */
+body {
+  font-family: var(--font-sans);      /* Usa inter */
+  font-weight: 400;                   /* Regular */
+  font-size: 16px;                    /* 11–12pt aprox (guia) */
+  line-height: 1.6;                   /* Espacio vertical entre lineas*/
+  color: var(--color-texto);
+  background: var(--color-fondo);
+}
+
+/* Imágenes, con configuracion para que se adapten en mobile */
+img {
+  max-width: 100%; /* ancho maximo 100% del contenedor */
+  height: auto;    /* altura auto, mantiene la proporcion de la imagen */
+  display: block;  /* elimina espacios extra */
+}
+
+a { /* Enlaces */
+  text-decoration: none; 
+  color: inherit;        /* Hereda el color del padre */
+}
+
+ul {
+  list-style: none; /* elimina los puntos de las listas */
+  padding: 0;
+}
+
+
+/* Contenedor principal, centra el contenido */
+.container {
+  width: min(100% - 2rem, var(--maxw)); /* Deja margenes laterales de 2rem, pero no mas que el ancho maximo*/
+  margin-inline: auto;
+}
+
+/* Botones */
+.btn {
+  display: inline-block;
+  padding: var(--s3) var(--s5); /* Padding interno, vertical y horizontal */
+  background: var(--color-primario);   
+  color: var(--color-texto-inv);      
+  border: 0;
+  border-radius: var(--radius); /* Redondeo de bordes */
+  font-family: var(--font-sans); 
+  font-weight: 500;          /* Medium */
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-cta);
+  cursor: pointer;
+  transition: background .3s ease;
+}
+.btn:hover {
+  background: var(--color-secundario); 
+}
+
+/*Al navegar con tabulador, el foco se ve resaltado*/
+:focus-visible {
+  outline: 2px solid var(--color-detalle-premium); 
+  outline-offset: 2px;
+}
+
+/* Títulos editoriales (Playfair Display) */
+.hj-title {
+  font-family: var(--font-serif);     /* Playfair */
+  letter-spacing: var(--tracking-titulo);
+  text-transform: uppercase;          /* guía: títulos en mayúsculas */
+  font-weight: 700;                   /* Bold para títulos */
+}
+
+/* Leyendas / secundarios (Inter Light 300) */
+.hj-caption {
+  font-family: var(--font-sans);
+  font-weight: 300;                   /* Light */
+  letter-spacing: var(--tracking-leyenda);
+  font-size: 0.875rem;                /* aprox 14px */
+  opacity: .9;
+}
+
+/* Botones / CTAs (Inter Medium 500, mayúsculas) */
+.hj-cta {
+  font-family: var(--font-sans);
+  font-weight: 500;                   /* Medium */
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-cta);
+}
+
+/* ===================== Persona B ===================== */
+/* ========== HEADER + NAV ========== */
+/* (B) TODO: layout mobile-first con flex; nav vertical -> horizontal en desktop */
+
+
+
+/* ===================== Persona A ===================== */
+/* ========== HERO ========== */
+.hero-banner {
+  padding: var(--s8) var(--s4) var(--s6); /* Aire alrededor del bloque */
+  /* fondo suave con la base de marca */
+  background: linear-gradient(180deg, #faf7f3 0%, var(--color-fondo) 100%);
+}
+
+/*Titulo del Hero-banner*/
+.hero-banner > h2 {
+  font-family: var(--font-serif);          /* Playfair Display */
+  text-transform: uppercase;
+  letter-spacing: var(--tracking-titulo);  /* 0.1em */
+  font-weight: 700;                        
+  color: var(--color-primario);            
+
+  /* Tamaño fluido: crece un poquito en pantallas más grandes */
+  font-size: clamp(1.25rem, 3.5vw, 2rem);
+  line-height: 1.2;
+  margin-bottom: var(--s4);
+  text-align: center;                      /* centrado en mobile */
+}
+
+/*Parrafo del Hero-banner*/
+.hero-banner > p {
+  max-width: 70ch;         /* limita longitud de línea: lectura cómoda */
+  margin-inline: auto;     /* centra el bloque en mobile */
+  margin-bottom: var(--s2);
+  font-size: 1rem;         /* 16px */
+  line-height: 1.7;       
+  color: var(--color-texto);
+}
+
+/*Ajustes Tablet/Desktop*/
+@media (min-width: 768px) {
+  .hero-banner {
+    padding: var(--s8) 0;         /* usamos margen lateral del viewport */
+  }
+  .hero-banner > h2 {
+    text-align: left;              
+    margin-left: auto;             /* combinados con container simulado */
+    margin-right: auto;
+    width: min(100% - 2rem, var(--maxw));
+  }
+  .hero-banner > p {
+    margin-left: auto;
+    margin-right: auto;
+    width: min(100% - 2rem, var(--maxw));
+  }
+}
+
+
+
+
+/* ===================== Persona B ===================== */
+/* ========== PRODUCTOS DESTACADOS (cards) ========== */
+/* (B) TODO: contenedor de cards (flex mobile-first); tarjetas individuales */
+
+
+
+/* ===================== Persona B ===================== */
+/* ========== CONTACTO (formulario) ========== */
+/* (B) TODO: inputs, labels, textarea, botón; estados :focus/:hover */
+
+
+
+/* ===================== Persona A ===================== */
+/* ========== FOOTER ========== */
+footer {
+  margin-top: var(--s6);
+  padding: var(--s4);
+  background: var(--color-primario);
+  color: var(--color-texto-inv);
+  text-align: center;
+  border-top: 1px solid rgba(0,0,0,.06);
+}
+footer small { opacity: .9; }
+
+
+
+/* ===================== BREAKPOINTS ===================== */
+/* (A/B) TODO: ajustes responsive (tablet) */
+@media (min-width: 768px) {
+    /* header/nav horizontal, cards en fila, hero alineado, etc. */
+  }
+  
+  /* (A/B) TODO: ajustes responsive (desktop) */
+  @media (min-width: 1024px) {
+    /* tamaños tipográficos, gaps, anchos máximos, etc. */
+  }
+  

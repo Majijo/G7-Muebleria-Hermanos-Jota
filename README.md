@@ -4,5 +4,7 @@ Integrantes:
 - 
 
 Funcionalidades Implementadas:
+-
 
 Tecnologias Utilizadas:
+-
