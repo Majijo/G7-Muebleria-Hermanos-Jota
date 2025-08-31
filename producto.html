@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Catálogo</title>
+    <title>Catálogo - Mueblería Hermanos Jota</title>
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -20,67 +20,72 @@
     </header>
 
     <main>
-        <!--Mostrar todos los productos disponibles en una grilla de tarjetas. -->
-        <!--Cada producto debe ser un enlace a su página de detalle. -->
-        <!--Debe incluir un campo de búsqueda (la funcionalidad es un bonus, pero el elemento debe existir). -->
-        
-        <div class="container"> <!-- BARRA DE BÚSQUEDA -->
-            <input type="text" placeholder="Buscar">
-            <button>
-                <img src="https://www.cosarsilver.es/img/icons/search5.svg" alt="Buscar" width="10" height="10"/>
-            </button>
-        </div>
+        <section class="catalog-section">
+            <div class="search-container">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Buscar productos..." aria-label="Buscar productos">
+                    <button type="button" class="search-button" aria-label="Buscar">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="11" cy="11" r="8"></circle>
+                            <path d="m21 21-4.35-4.35"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
 
-        <h2>PRODUCTOS DISPONIBLES</h2>
-        <!-- !!!La información de los productos se cargará desde un archivo JavaScript local. -->
-        <!-- CORREGIR DESPUÉS DE LA CLASE. -->
-        <div class="productos">
-            <a href="#" title="Aparador Uspallata">
-                <p>Aparador Uspallata</p>
-                <img src="img/Aparador Uspallata.png" alt="Aparador Uspallata"/>
-            </a>
-            <a href="#" title="Biblioteca Recoleta">
-                <p>Biblioteca Recoleta</p>
-                <img src="img/Biblioteca Recoleta.png" alt="Biblioteca Recoleta"/>
-            </a>
-            <a href="#" title="Butaca Mendoza">
-                <img src="img/Butaca Mendoza.png" alt="Butaca Mendoza"/>
-            </a>
-            <a href="#" title="Escritorio Costa">
-                <p>Escritorio Costa</p>
-                <img src="img/Escritorio Costa.png" alt="Escritorio Costa"/>
-            </a>
-            <a href="#" title="Mesa Comedor Pampa">
-                <p>Mesa Comedor Pampa</p>
-                <img src="img/Mesa Comedor Pampa.png" alt="Mesa Comedor Pampa"/>
-            </a>
-            <a href="#" title="Mesa de Centro Araucaria">
-                <p>Mesa de Centro Araucaria</p>
-                <img src="img/Mesa de Centro Araucaria.png" alt="Mesa de Centro Araucaria"/>
-            </a>
-            <a href="#" title="Mesa de Noche Aconcagua">
-                <p>Mesa de Noche Aconcagua</p>
-                <img src="img/Mesa de Noche Aconcagua.png" alt="Mesa de Noche Aconcagua"/>
-            </a>
-            <a href="#" title="Silla de Trabajo Belgrano">
-                <p>Silla de Trabajo Belgrano</p>
-                <img src="img/Silla de Trabajo Belgrano.png" alt="Silla de Trabajo Belgrano"/>
-            </a>
-            <a href="#" title="Sillas Córdoba">
-                <p>Sillas Córdoba</p>
-                <img src="img/Sillas Córdoba.png" alt="Sillas Córdoba"/>
-            </a>
-            <a href="#" title="Sillón Copacabana">
-                <p>Sillón Copacabana</p>
-                <img src="img/Sillón Copacabana.png" alt="Sillón Copacabana"/>
-            </a>
-            <a href="#" title="Sofá Patagonia">
-                <p>Sofá Patagonia</p>
-                <img src="img/Sofá Patagonia.png" alt="Sofá Patagonia"/>
-            </a>
-        </div>
+            <h2>PRODUCTOS DISPONIBLES</h2>
+            
+            <div class="products-grid">
+                <a href="#" class="product-card" title="Aparador Uspallata">
+                    <img src="img/Aparador Uspallata.png" alt="Aparador Uspallata"/>
+                    <h3>Aparador Uspallata</h3>
+                </a>
+                <a href="#" class="product-card" title="Biblioteca Recoleta">
+                    <img src="img/Biblioteca Recoleta.png" alt="Biblioteca Recoleta"/>
+                    <h3>Biblioteca Recoleta</h3>
+                </a>
+                <a href="#" class="product-card" title="Butaca Mendoza">
+                    <img src="img/Butaca Mendoza.png" alt="Butaca Mendoza"/>
+                    <h3>Butaca Mendoza</h3>
+                </a>
+                <a href="#" class="product-card" title="Escritorio Costa">
+                    <img src="img/Escritorio Costa.png" alt="Escritorio Costa"/>
+                    <h3>Escritorio Costa</h3>
+                </a>
+                <a href="#" class="product-card" title="Mesa Comedor Pampa">
+                    <img src="img/Mesa Comedor Pampa.png" alt="Mesa Comedor Pampa"/>
+                    <h3>Mesa Comedor Pampa</h3>
+                </a>
+                <a href="#" class="product-card" title="Mesa de Centro Araucaria">
+                    <img src="img/Mesa de Centro Araucaria.png" alt="Mesa de Centro Araucaria"/>
+                    <h3>Mesa de Centro Araucaria</h3>
+                </a>
+                <a href="#" class="product-card" title="Mesa de Noche Aconcagua">
+                    <img src="img/Mesa de Noche Aconcagua.png" alt="Mesa de Noche Aconcagua"/>
+                    <h3>Mesa de Noche Aconcagua</h3>
+                </a>
+                <a href="#" class="product-card" title="Silla de Trabajo Belgrano">
+                    <img src="img/Silla de Trabajo Belgrano.png" alt="Silla de Trabajo Belgrano"/>
+                    <h3>Silla de Trabajo Belgrano</h3>
+                </a>
+                <a href="#" class="product-card" title="Sillas Córdoba">
+                    <img src="img/Sillas Córdoba.png" alt="Sillas Córdoba"/>
+                    <h3>Sillas Córdoba</h3>
+                </a>
+                <a href="#" class="product-card" title="Sillón Copacabana">
+                    <img src="img/Sillón Copacabana.png" alt="Sillón Copacabana"/>
+                    <h3>Sillón Copacabana</h3>
+                </a>
+                <a href="#" class="product-card" title="Sofá Patagonia">
+                    <img src="img/Sofá Patagonia.png" alt="Sofá Patagonia"/>
+                    <h3>Sofá Patagonia</h3>
+                </a>
+            </div>
+        </section>
     </main>
 
-    <footer>©2025 Hermanos Jota Furniture</footer>
+    <footer>
+        <p>©2025 Hermanos Jota Furniture</p>
+    </footer>
 </body>
 </html>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -9,7 +9,7 @@
 </head>
 
 <body>
-    <section>
+    <section class="contact-section">
         <h2>CONTACTO</h2>
         <ul>
             <li><b>Email ventas:</b> ventas@hermanosjota.com.ar</li>
@@ -18,9 +18,7 @@
         </ul>
     </section>
 
-    <br>
-
-    <section>
+    <section class="contact-section">
         <h2>SHOWROOM Y TALLER</h2>
         <p>Av. San Juan 2847</p> 
         <p>C1232AAB — Barrio de San Cristóbal</p>
@@ -30,30 +28,26 @@
         <p>Sábados: 10:00 - 14:00</p>
     </section>
 
-    <br>
-
-    <section>
+    <section class="contact-section">
         <h2>DEJANOS TU MENSAJE!</h2>
         <p>¿Tenes preguntas o comentarios? Deja un mensaje y te respondemos lo antes posible</p>
-        <form action="URL" method="POST">
+        <form class="contact-form" action="#" method="POST">
             <div>
-                <input type="text" class="form-control" id="nombre" placeholder="Nombre y Apellido">
+                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre y Apellido" required>
             </div>
-            <br>
             <div>
-                <input type="text" class="form-control" id="email" placeholder="Email">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
             </div>
-            <br>
             <div>
-                <textarea rows="5" class="form-control" id="mensaje" placeholder="Mensaje"></textarea>
+                <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" rows="5" required></textarea>
             </div>
-            <br>
-            <button type="submit"><b>Enviar</b></button>
+            <button type="submit">Enviar</button>
         </form>
     </section>
     
-    <hr>
-    <footer>©2025 Hermanos Jota Furniture</footer>
+    <footer>
+        <p>©2025 Hermanos Jota Furniture</p>
+    </footer>
 </body>
 
 </html>
