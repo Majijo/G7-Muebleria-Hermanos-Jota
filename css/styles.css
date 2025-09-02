@@ -2,7 +2,8 @@
 /* Importación de fuentes - no todas están en todos los sistemas/navegadores */
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
 
-:root {
+
+:root { /* root se usa para definir variables globales */
   /* Colores de marca */
   --color-primario: #A0522D;
   --color-secundario: #87A96B;
@@ -18,12 +19,13 @@
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   
   /* Guías tipográficas */
-  --tracking-titulo: 0.1em;
-  --tracking-leyenda: 0.02em;
-  --tracking-cta: 0.08em;
+  --tracking-titulo: 0.1em; 
+  --tracking-leyenda: 0.02em; 
+  --tracking-cta: 0.08em; 
  
-  /* Espaciado */
-  --maxw: 1100px;
+  
+  --maxw: 1100px; /* ancho máximo del contenedor */
+  /* Espaciado escalable, de mas pequeño a mas grande */
   --s1: .25rem; --s2: .5rem; --s3: .75rem;
   --s4: 1rem;  --s5: 1.5rem; --s6: 2rem; --s8: 3rem;
  
@@ -32,14 +34,14 @@
 }
 
 /* ========== RESET & BASE ========== */
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
+* {  /* * se usa para seleccionar todos los elementos */
+  box-sizing: border-box; /* el ancho y alto del elemento incluya el padding y el border */
+  margin: 0; /* Elimina*/
   padding: 0;  
 }
 
 html { 
-  scroll-behavior: smooth; 
+  scroll-behavior: smooth; /* Evita saltos abruptos */
 }
 
 body {
@@ -58,19 +60,19 @@ img {
 }
 
 a {
-  text-decoration: none; 
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
   color: inherit;
 }
 
 ul {
-  list-style: none;
+  list-style: none; /* Elimina los puntos de las listas */
   padding: 0;
 }
 
 /* ========== UTILIDADES GLOBALES ========== */
 .container {
   width: min(100% - 2rem, var(--maxw));
-  margin-inline: auto;
+  margin-inline: auto; 
 }
 
 .btn {
@@ -92,7 +94,7 @@ ul {
   background: var(--color-secundario); 
 }
 
-:focus-visible {
+:focus-visible { /* Solo se ve con el teclado */
   outline: 2px solid var(--detalle-premium); 
   outline-offset: 2px;
 }
@@ -465,8 +467,8 @@ footer small {
 /* ========== CATALOG PAGE ========== */
 .catalog-section {
   width: min(100% - 2rem, var(--maxw));
-  margin: var(--s6) auto;
-  padding: var(--s4) 0;
+  margin: var(--s1) auto var(--s6);
+  padding: var(--s6) 0 var(--s4);
 }
 
 .catalog-section > h2 {
