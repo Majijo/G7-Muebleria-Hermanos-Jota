@@ -253,6 +253,15 @@ header nav a:hover {
   opacity: 0.95;
 }
 
+.hero-img > img {
+  position: relative; /* saca la imagen del flujo */
+  top: 0;
+  left: 0;
+  width: 100vw;       /* ocupa todo el ancho de la ventana */
+  height: 100%;       /* ocupa toda la altura de la sección */
+  object-fit: cover;  /* cubre el contenedor sin deformarse */
+}
+
 @media (min-width: 768px) {
   .hero-banner {
     padding: var(--s8) clamp(var(--s4), 4vw, var(--s8));
