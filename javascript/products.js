@@ -115,7 +115,7 @@ const productos = [
     "acabado": "Aceite-cera natural",
     "origen": "Argentina",
     "extension": "Sistema de mariposa central",
-    "capacidad": "6-10 comensale"
+    "capacidad": "6-10 comensales"
   },
   {
     "id": 10,
