@@ -1,5 +1,5 @@
 // Importar el array de productos
-import { productos } from './products.js';
+import { productos } from '../js/products.js';
 
 // Variables globales para el estado de la aplicación
 let productosFiltrados = [...productos];
