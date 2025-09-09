@@ -387,3 +387,22 @@ window.HermanosJota = {
 
 // Hacer la función anadirAlCarrito global para el onclick del HTML
 window.anadirAlCarrito = anadirAlCarrito;
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btnAgregar = document.getElementById('btn-add-to-cart')
+  
+  if (btnAgregar) {
+    btnAgregar.addEventListener('click', () => {
+      const params = new URLSearchParams(window.location.search)
+      const id = parseInt(params.get('id'))
+
+      if (id) {
+        anadirAlCarrito(id)
+      } else {
+        console.error('No se encontró ID del producto')
+      }
+    })
+  }
+})
+
+window.anadirAlCarrito = anadirAlCarrito;
